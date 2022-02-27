@@ -19,8 +19,6 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        Formulaire::factory()->has(Question::factory()->count(4))->count(4)->create();
-
-        Question::factory()->has(Reponse::factory()->count(4))->count(4)->create();
+        Formulaire::factory()->has(Question::factory()->has(Reponse::factory()->count(4))->count(4))->count(4)->create();
     }
 }
