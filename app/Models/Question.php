@@ -13,4 +13,9 @@ class Question extends Model
     {
         return $this->belongsTo(Formulaire::class);
     }
+
+    public function reponse()
+    {
+        return $this->hasMany(Question::class);
+    }
 }
