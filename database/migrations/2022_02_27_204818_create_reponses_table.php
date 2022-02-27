@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReponesesTable extends Migration
+class CreateReponsesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateReponesesTable extends Migration
      */
     public function up()
     {
-        Schema::create('reponeses', function (Blueprint $table) {
+        Schema::create('reponses', function (Blueprint $table) {
             $table->id();
             $table->string('lib_reponse');
             $table->unsignedBigInteger('question_id');
-            $table->foreign('question')->references('id')->on('questions')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('question_id')->references('id')->on('questions')->onDelete('restrict')->onUpdate('restrict');
             $table->boolean('correct');
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ class CreateReponesesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reponeses');
+        Schema::dropIfExists('reponses');
     }
 }

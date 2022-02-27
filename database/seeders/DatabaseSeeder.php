@@ -21,6 +21,6 @@ class DatabaseSeeder extends Seeder
 
         Formulaire::factory()->has(Question::factory()->count(4))->count(4)->create();
 
-        // Reponse::factory()->has(Question::factory()->count(4))->count(4)->create();
+        // Question::factory()->has(Reponse::factory()->count(4))->count(4)->create();
     }
 }
