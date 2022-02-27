@@ -15,6 +15,8 @@ class ReponseFactory extends Factory
     {
         return [
             //
+            'lib_reponse' => $this->faker->text(50),
+            'correct' => $this->faker->boolean(),
         ];
     }
 }
