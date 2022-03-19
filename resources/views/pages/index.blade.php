@@ -5,7 +5,7 @@
             <h5 class='card-title mb-3'> Liste des QCM </h5>
             @foreach ($data as $d)
                 <p class='card-text'>
-                    <a href='{{ 'question.php?id=' . $d->id }}' class='link-dark'>
+                    <a href="{{ route('question.index', $d->id) }}" class='link-dark'>
                         {{ $d->lib_formlaire }} </a></br>
                 </p>
             @endforeach

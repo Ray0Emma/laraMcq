@@ -1,4 +1,4 @@
-<footer class="footer bg-white mt-auto py-3 fixed-bottom">
+<footer class="footer bg-white mt-5  py-3 ">
     <div class="container-lg">
         <a href="index.php" class="text-center text-xl text-reset text-decoration-none ">
             <div>
