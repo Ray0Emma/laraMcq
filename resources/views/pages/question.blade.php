@@ -3,6 +3,7 @@
     <div class='mt-5 card border-info py-2' style='width: 20rem;'>
         <div class='card-body'>
             <form action="{{ route('reponse.index') }}" method='POST'>
+                @csrf
                 <h5 class='card-title mb-3'> Questions </h5>
                 <p class='card-text'>
                     @php
@@ -20,6 +21,7 @@
                     @endforeach
                 </p>
                 <button type='submit' class='btn btn-info'>Valider</button>
+                {{-- @dd($_POST); --}}
             </form>
         </div>
     </div>
